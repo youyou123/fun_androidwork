@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#234865"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_login_logo"
+                android:layout_width="164px"
+                android:layout_height="130px"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_logo" />
+
+            <EditText
+                android:id="@+id/edit_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_below="@+id/iv_login_logo"
+                android:layout_marginLeft="105px"
+                android:layout_marginRight="105px"
+                android:layout_marginTop="116px"
+                android:background="@drawable/shape_login_edit"
+                android:drawableLeft="@mipmap/ic_login_username"
+                android:drawablePadding="36px"
+                android:hint="手机号/用户名"
+                android:maxLines="1"
+                android:paddingLeft="28px"
+                android:paddingRight="28px"
+                android:textColor="#FFC7C7C7"
+                android:textColorHint="#FF597389"
+                android:textSize="28px" />
+
+            <FrameLayout
+                android:id="@+id/frame_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_below="@+id/edit_login_username"
+                android:layout_marginLeft="105px"
+                android:layout_marginRight="105px"
+                android:layout_marginTop="56px">
+
+                <EditText
+                    android:id="@+id/edit_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:background="@drawable/shape_login_edit"
+                    android:drawableLeft="@mipmap/ic_login_password"
+                    android:drawablePadding="36px"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingLeft="28px"
+                    android:paddingRight="100px"
+                    android:textColor="#FFC7C7C7"
+                    android:textColorHint="#FF597389"
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:id="@+id/iv_login_watch_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingBottom="38px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px"
+                    android:paddingTop="38px"
+                    android:src="@mipmap/ic_login_watch" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/frame_login_password"
+                android:layout_below="@+id/frame_login_password"
+                android:layout_marginTop="12px"
+                android:text="忘记密码?"
+                android:textColor="#FF597389"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/tv_login_login"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_below="@+id/frame_login_password"
+                android:layout_marginLeft="105px"
+                android:layout_marginRight="105px"
+                android:layout_marginTop="102px"
+                android:background="@drawable/sel_login_login"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/sel_login_login"
+                android:textSize="32px" />
+
+            <TextView
+                android:id="@+id/tv_login_register"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_below="@+id/tv_login_login"
+                android:layout_marginLeft="105px"
+                android:layout_marginRight="105px"
+                android:layout_marginTop="36px"
+                android:background="@drawable/shape_login_register"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="#FF3AC793"
+                android:textSize="32px" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_login_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="26px"
+            android:paddingLeft="40px"
+            android:paddingRight="40px"
+            android:paddingTop="26px"
+            android:src="@mipmap/icon_back" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_login_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="40px"
+        android:text="第三方登录"
+        android:textColor="#FF597389"
+        android:textSize="24px" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_login_third"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="40px"
+        android:layout_marginLeft="105px"
+        android:layout_marginRight="105px">
+
+        <ImageView
+            android:id="@+id/iv_login_qq"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_login_qq" />
+
+        <ImageView
+            android:id="@+id/iv_login_weibo"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_login_weibo" />
+
+        <ImageView
+            android:id="@+id/iv_login_wechart"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_login_wechart" />
+    </RelativeLayout>
+</LinearLayout>
